@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src"
+    "start": "node ./src",
+    "test": "mocha --recursive --exit",
+    "all": "concurrently \"npm test \" \"npm start\""
+
   },
   "keywords": [],
   "author": "Hady",
@@ -19,6 +22,9 @@
     "mocha": "^9.0.0",
     "nodemon": "^2.0.12",
     "supertest": "^6.1.3"
+  },
+  "directories": {
+    "test": "test"
   },
   "devDependencies": {}
 }
